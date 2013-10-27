@@ -1,0 +1,28 @@
+
+---------------------------------------------------------
+  People who helped me developing the secure arp daemon
+---------------------------------------------------------
+
+   Gigi Sullivan <sullivan@sikurezza.org>    for hours of discussion on kernel internals
+
+   Angelo Dell'Aera <buffer@users.sf.net>    for the good pointers to sk_buff stuff
+                                             and for spending time on IRC to
+                                             deal with my LKM problems
+
+   Claudio Agosti <vecna@blackhats.it>       for the hook to the arp_packet_type thru 
+                                             System.map
+
+   Nicola Bonelli <awgn@antifork.org>        for the hash table algoritm
+   
+--------------------------------------------
+  Documentation Translators
+--------------------------------------------
+
+---------------------------------------------
+  Betatesting Team 
+---------------------------------------------
+
+
+
+if you think you should be in the list, please mail me.
+

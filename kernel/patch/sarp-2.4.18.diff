@@ -1,0 +1,147 @@
+diff -ruN -X dontdiff linux/Documentation/Configure.help linux-2.4.18-sarp/Documentation/Configure.help
+--- linux/Documentation/Configure.help	Tue Aug  6 11:29:08 2002
++++ linux-2.4.18-sarp/Documentation/Configure.help	Wed Aug 21 13:34:33 2002
+@@ -4999,6 +4999,10 @@
+   and you should also say Y to "Kernel/User network link driver",
+   below. If unsure, say N.
+ 
++Secure-ARP daemon support
++CONFIG_SECUREARP
++  Description not yet done... ;)
++
+ TCP/IP networking
+ CONFIG_INET
+   These are the protocols used on the Internet and on most local
+diff -ruN -X dontdiff linux/Makefile linux-2.4.18-sarp/Makefile
+--- linux/Makefile	Mon Feb 25 20:37:52 2002
++++ linux-2.4.18-sarp/Makefile	Wed Aug 21 13:21:18 2002
+@@ -1,7 +1,7 @@
+ VERSION = 2
+ PATCHLEVEL = 4
+ SUBLEVEL = 18
+-EXTRAVERSION =
++EXTRAVERSION = -sarp
+ 
+ KERNELRELEASE=$(VERSION).$(PATCHLEVEL).$(SUBLEVEL)$(EXTRAVERSION)
+ 
+diff -ruN -X dontdiff linux/net/ipv4/Config.in linux-2.4.18-sarp/net/ipv4/Config.in
+--- linux/net/ipv4/Config.in	Fri Dec 21 18:42:05 2001
++++ linux-2.4.18-sarp/net/ipv4/Config.in	Wed Aug 21 13:23:44 2002
+@@ -38,6 +38,7 @@
+ fi
+ if [ "$CONFIG_EXPERIMENTAL" = "y" ]; then
+    bool '  IP: ARP daemon support (EXPERIMENTAL)' CONFIG_ARPD
++   bool '  IP: Secure-ARP daemon support (EXPERIMENTAL)' CONFIG_SECUREARP
+ fi
+ bool '  IP: TCP Explicit Congestion Notification support' CONFIG_INET_ECN
+ bool '  IP: TCP syncookie support (disabled per default)' CONFIG_SYN_COOKIES
+diff -ruN -X dontdiff linux/net/ipv4/arp.c linux-2.4.18-sarp/net/ipv4/arp.c
+--- linux/net/ipv4/arp.c	Fri Sep  7 20:01:20 2001
++++ linux-2.4.18-sarp/net/ipv4/arp.c	Thu Aug 29 23:01:01 2002
+@@ -113,6 +113,9 @@
+ #include <asm/uaccess.h>
+ 
+ 
++#ifdef CONFIG_SECUREARP
++int secure_arp_enabled = 0;
++#endif
+ 
+ /*
+  *	Interface to generic neighbour cache.
+@@ -1051,6 +1054,9 @@
+  */
+ #ifndef CONFIG_PROC_FS
+ static int arp_get_info(char *buffer, char **start, off_t offset, int length) { return 0; }
++#ifdef CONFIG_SECUREARP
++static int secure_arp_get_info(char *buffer, char **start, off_t offset, int length) { return 0; }
++#endif
+ #else
+ #if defined(CONFIG_AX25) || defined(CONFIG_AX25_MODULE)
+ static char *ax2asc2(ax25_address *a, char *buf);
+@@ -1168,6 +1174,61 @@
+ 		len = 0;
+ 	return len;
+ }
++
++#ifdef CONFIG_SECUREARP
++
++static struct packet_type arp_packet_type;
++
++int secure_arp_proc_read (char *buf, char **start, off_t offs, int len) 
++{  
++   return sprintf(buf, "%d\n", secure_arp_enabled);
++}
++
++ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length, loff_t *offset)
++{
++   #define MESSAGE_LEN 5
++   int i, value;
++   char *message = kmalloc(MESSAGE_LEN, GFP_KERNEL);
++
++   for (i = 0; i < MESSAGE_LEN-1 && i < length; i++)
++      get_user(message[i], buf + i);
++   
++   message[i]='\0';
++   value = simple_strtoul(message, NULL, 10);
++   kfree(message);
++   
++   switch(value) {
++      case 1:   /* enable it */
++         if (secure_arp_enabled) 
++            return 0;
++         
++         secure_arp_enabled = 1;
++         dev_remove_pack(&arp_packet_type);
++         printk(KERN_INFO "[secure_arp] enabled\n");
++         printk(KERN_INFO "[secure_arp] kernel can now reveive ARP entries "\
++                          "only through SARP daemon\n");
++         
++         break;
++      case 0:   /* disable it */
++         if (!secure_arp_enabled) 
++            return 0;
++         
++         secure_arp_enabled = 0;
++         dev_add_pack(&arp_packet_type);
++         printk(KERN_INFO "[secure_arp] disabled\n");
++         printk(KERN_INFO "[secure_arp] kernel can now receive \"classic\" "\
++                          "ARP packets\n");
++         break;
++      default:  /* error */
++         return 0;
++         break;
++   }
++   
++   return i;                                                
++}
++
++#endif
++
+ #endif
+ 
+ /* Note, that it is not on notifier chain.
+@@ -1192,12 +1253,24 @@
+ 
+ void __init arp_init (void)
+ {
++#ifdef CONFIG_SECUREARP
++   struct proc_dir_entry *entry;
++#endif
++   
+ 	neigh_table_init(&arp_tbl);
+ 
+ 	dev_add_pack(&arp_packet_type);
+ 
+ 	proc_net_create ("arp", 0, arp_get_info);
+ 
++#ifdef CONFIG_SECUREARP
++   entry = create_proc_entry("sys/net/ipv4/sarp", 0644, NULL);
++
++   entry->read_proc = (read_proc_t *)&secure_arp_proc_read;
++   entry->write_proc = (write_proc_t *)&secure_arp_proc_write;
++           
++#endif
++   
+ #ifdef CONFIG_SYSCTL
+ 	neigh_sysctl_register(NULL, &arp_tbl.parms, NET_IPV4, NET_IPV4_NEIGH, "ipv4");
+ #endif

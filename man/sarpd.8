@@ -1,0 +1,87 @@
+.\"  sarpd -- a daemon for Secure ARP authentication
+.\"
+.\"  Copyright (C) 2002  ALoR <alor@users.sourceforge.net>
+.\"
+.\"  This program is free software; you can redistribute it and/or modify
+.\"  it under the terms of the GNU General Public License as published by
+.\"  the Free Software Foundation; either version 2 of the License, or
+.\"  (at your option) any later version.
+.\"
+.\"  This program is distributed in the hope that it will be useful,
+.\"  but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\"  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\"  GNU General Public License for more details.
+.\"
+.\"  You should have received a copy of the GNU General Public License
+.\"  along with this program; if not, write to the Free Software
+.\"  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+.\"
+.\"
+.de Sp
+.if n .sp
+.if t .sp 0.4
+..
+.TH SARPD "8" "@SERIAL@" "sarpd 0.0.9-devel"
+.SH NAME
+.B sarpd 0.0.9-devel \- a daemon for Secure ARP authentication
+
+.SH SYNOPSIS
+.B sarpd
+[\fIOPTIONS\fR] 
+
+.SH DESCRIPTION
+this is the userland daemon. it require thate the LKM is loaded in memory
+(insmod sarp.o  in the kernel/module directory)
+.br
+One host of the LAN have to run as the Authoritative Key Distributor (--akd-mode).
+it have to maintain the keys database. all the hosts of the LAN have to copy
+their public key in the repository directory of the AKD.
+.br
+all the other hosts run in normal mode and load the AKD public key from their
+keys repository directory.
+
+.PP
+.SH OPTIONS
+Options that make sense together can generally be combined. sarpd will warn the user
+about unsupported option combinations.
+.TP
+\fB\-A\fR, \fB\-\-akd-mode\fR
+run the daemon as the AKD
+.br
+ONLY ONE host must run in this mode.
+.TP
+\fB\-p\fR, \fB\-\-prefix <PATH>\fR
+use this prefix to find config files
+.TP
+\fB\-c\fR, \fB\-\-conf <FILE>\fR
+load configuration from this file
+.TP
+\fB\-k\fR, \fB\-\-known_host <FILE>\fR
+load known_hosts from this file. this file contain a list of static ARP
+association. it is useful if any host of the lan does not support S-ARP. these
+hosts should be put in this file.
+.TP
+\fB\-v\fR, \fB\-\-version\fR
+prints the version and exit
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+display an help screen
+          
+
+
+.SH PLATFORMS
+Linux 2.2.x  2.4.x
+
+
+.SH FILES
+.I /etc/sarpd/conf
+ - the config file
+
+
+.SH AUTHOR
+Alberto Ornaghi (ALoR) <alor@security.dico.unimi.it>
+
+
+.SH BUGS
+
+

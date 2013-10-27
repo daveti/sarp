@@ -1,0 +1,25 @@
+----------------------------
+TODO for the sarpd (daemon)
+----------------------------
+
+   !!! ADD SUPPORT FOR CHALLENGE !!!
+   (without it the protocol is feasible of replay attack form the akd to host,
+   thus desyncronizing the timestamp)
+
+   + check the destination before all the operations
+
+   + sign the request to speed up the first ping
+
+   + CA mode
+      + CA sends a special known_host 
+      
+   + Proxy ARP
+
+   + DHCP daemon sarp enabled
+
+   + IPv6 support 
+
+----------------------------
+TODO for the sarp (client)
+----------------------------
+

@@ -1,0 +1,29 @@
+################################
+# Configuration file
+#
+################################
+
+# the file containing the public key of the CA for the specific
+# ethernet device. 
+CAKey[eth0]: /etc/sarpd/id_sarp_ca.sarp
+#CAKey[eth1]: /etc/sarpd/id_sarp_ca.sarp
+#CAKey[eth2]: /etc/sarpd/id_sarp_ca.sarp
+
+
+# the file containing the PRIVATE key for this host.
+# this is unique on all the interfaces.
+# the parameter MUST be "all".
+MYKey[all]: /etc/sarpd/id_sarp
+
+
+# only for the CA.
+# the public key for the DHCP SARP enable server
+# this is needed to insert the host public key in the 
+# databasa. the DHCP will send us the pub key signed
+# with its private one
+DHCPKey[eth0]: /etc/sarpd/id_sarp_dhcp.sarp
+
+# the key repository for the CA
+KEYDir[all]: /etc/sarpd/hosts
+
+#eof

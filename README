@@ -1,0 +1,20 @@
+
+*******************************
+            NOTICE
+*******************************            
+
+THIS IS ONLY A PROTOTYPE, NO DOCUMENTATION IS PROVIDED.
+
+
+
+please email to alor@security.dico.unimi.it if you have
+any problem testing the program.
+
+
+
+to compile it requires:
+
+libpcap >= 0.7.1
+libnet >= 1.1.0
+libnetlink >= 020116
+

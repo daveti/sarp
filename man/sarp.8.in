@@ -1,0 +1,88 @@
+.\"  sarp -- client for Secure ARP key management
+.\"
+.\"  Copyright (C) 2002  ALoR <alor@users.sourceforge.net>
+.\"
+.\"  This program is free software; you can redistribute it and/or modify
+.\"  it under the terms of the GNU General Public License as published by
+.\"  the Free Software Foundation; either version 2 of the License, or
+.\"  (at your option) any later version.
+.\"
+.\"  This program is distributed in the hope that it will be useful,
+.\"  but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\"  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\"  GNU General Public License for more details.
+.\"
+.\"  You should have received a copy of the GNU General Public License
+.\"  along with this program; if not, write to the Free Software
+.\"  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+.\"
+.\"
+.de Sp
+.if n .sp
+.if t .sp 0.4
+..
+.TH SARP "8" "@SERIAL@" "sarp @VERSION@"
+.SH NAME
+.B sarp @VERSION@ \- client for Secure ARP key management
+.SH SYNOPSIS
+.B sarp
+[\fIOPTIONS\fR] 
+
+.SH DESCRIPTION
+sarp is a tool for the creation of DSA key to be used in a S-ARP LAN.
+.br
+the keys have to be put in the AKD database. 
+
+.PP
+.SH OPTIONS
+Options that make sense together can generally be combined. sarpd will warn the user
+about unsupported option combinations.
+.TP
+\fB\-b\fR, \fB\-\-bitlen <FILE>\fR
+use this option to generate keys with arbitrary key length (def. 1024)
+.TP
+\fB\-g\fR, \fB\-\-genkey\fR
+generate a keypair
+.TP
+\fB\-s\fR, \fB\-\-sign\fR
+generate a signed info file. this file format is used by the AKD to load the
+information in its database. 
+.TP
+\fB\-o\fR, \fB\-\-outfile <FILE>\fR
+specify the output filename for keypair
+.TP
+\fB\-c\fR, \fB\-\-check\fR
+check if a given keypair is valid. it perform a test to check if the public
+key corresponts to the private one
+.TP
+\fB\-i\fR, \fB\-\-infile <FILE>\fR
+specify the input filename for keypair verification
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+be verbose during operations
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+prints the version and exit
+
+                  
+.SH EXAMPLES
+Here are some examples of using sarpd.
+.TP
+.B sarp -gv -b 512
+.Sp
+create a 512 bit key pair
+.TP
+.B sarp -gsv
+.Sp
+create a 1024 bit signed key pair (the .sarp file is the file to be put in the
+AKD repository directory)
+
+.SH PLATFORMS
+Linux 2.2.x  2.4.x
+
+
+.SH AUTHOR
+Alberto Ornaghi (ALoR) <alor@security.dico.unimi.it>
+
+
+

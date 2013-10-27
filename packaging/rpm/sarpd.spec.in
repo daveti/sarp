@@ -1,0 +1,36 @@
+%define prefix @prefix@
+
+Summary:    @PROG@ is a daemon for Secure-ARP authentication
+Name:       @PROG@
+Version:    @VERSION@
+Release:    @RELEASE@
+Serial:     @SERIAL@
+Packager:   ALoR <alor@users.sourceforge.net>
+Source:     http://@PROG@.sourceforge.net/download/%{name}-%{version}.tar.gz
+URL:        http://@PROG@.sourceforge.net/
+License:    GPL
+Group:      Networking/Daemons
+Prefix:     %{prefix}
+Buildroot:  %{_tmppath}/%{name}-%{version}-root
+
+%description
+@PROG@ is a daemon for Secure-ARP authentication 
+
+%prep
+%setup -q
+
+%build
+./configure --prefix=%{prefix} --disable-debug --mandir=%{_mandir}
+make
+
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+%{_mandir}/man8/*
+%doc COPYING README CHANGELOG AUTHOR TODO THANKS INSTALL 
+%{prefix}/bin/*
