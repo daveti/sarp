@@ -25,13 +25,25 @@
    0.5 - disable secure arp on exit
    0.3 - moved in /proc/sys/net/ipv4/sarp
    0.1 - inizial version - extracted fro kernel patch
-    
+   
+   0.X - make it work on kernel 3.2.0
+	 Oct 29, 2013
+	 daveti@cs.uoregon.edu
+	 http://davejingtian.org
+ 
 */
 
 #define __KERNEL__
 #define MODULE
 
+//daveti: kernel version checking for autoconf.h
+#include <linux/version.h>
+#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 33)
 #include <linux/autoconf.h>
+#else
+#include <generated/autoconf.h>
+#endif
+//#include <linux/autoconf.h>
 #ifdef CONFIG_MODVERSIONS
 #include <linux/modversions.h>
 #endif
@@ -50,6 +62,9 @@
 
 #define MODULE_NAME    "sarp"
 #define MODULE_VERSION "0.9"
+//daveti
+#define SARP_PROC_PATH "/proc/sarp"
+
 MODULE_AUTHOR("Alberto Ornaghi");
 MODULE_DESCRIPTION("Secure ARP");
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
@@ -179,8 +194,10 @@ ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length
 static int __init sarp_init(void)
 {
    struct proc_dir_entry *sarp_entry;
-   
-   sarp_entry = create_proc_entry("sys/net/ipv4/sarp", 0644, NULL);
+  
+//daveti: update the proc entry 
+   //sarp_entry = create_proc_entry("sys/net/ipv4/sarp", 0644, NULL);
+   sarp_entry = create_proc_entry(SARP_PROC_PATH, 0644, NULL);
    
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
    sarp_entry->owner = THIS_MODULE;
@@ -195,7 +212,9 @@ static int __init sarp_init(void)
 
 static void __exit sarp_exit(void)
 {
-   remove_proc_entry("sys/net/ipv4/sarp", NULL);
+//daveti: update proc entry
+   //remove_proc_entry("sys/net/ipv4/sarp", NULL);
+   remove_proc_entry(SARP_PROC_PATH, NULL);
 
    if (secure_arp_enabled)
       disable_sarp();
