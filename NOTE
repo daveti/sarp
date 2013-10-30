@@ -1,0 +1,39 @@
+# NOTE
+# Changes within the original sarp
+# to make it work on Ubuntu 12.04 with
+# Linux kernel 3.2.0.56 x86_64
+# Oct 28, 2013
+# daveti@cs.uoregon.edu
+# http://davejingtian.org
+
+0. Extra libutil.a under ./lib
+If you want to build yourself,
+here it is...
+-------------------------------
+a. Extra pkgs/tools
+apt-get install flex
+apt-get install bison
+apt-get isstall libdb-dev
+git clone https://github.com/vnrick/iproute2 master
+
+b. Build the iproute2 pkg by yourself
+apt-get install iproute
+apt-get install iproute-dev
+All the cmds above could install the libnetlink. But we also need libutil.a. It seems the Ubuntu customized pkg would not install the corresponding libutil.a.
+-------------------------------
+
+1. Add libutil.a into ./src/Makefile for sarpd linkage
+am_sarpd_OBJECTS = sarpd-sad_main.$(OBJEXT) sarpd-sad_debug.$(OBJEXT) \
+        sarpd-sad_error.$(OBJEXT) sarpd-sad_signal.$(OBJEXT) \
+        sarpd-sad_globals.$(OBJEXT) sarpd-sad_parser.$(OBJEXT) \
+        sarpd-sad_syslog.$(OBJEXT) sarpd-sad_capture.$(OBJEXT) \
+        sarpd-sad_conf.$(OBJEXT) sarpd-sad_hash.$(OBJEXT) \
+        sarpd-sad_sarp.$(OBJEXT) sarpd-sad_neigh.$(OBJEXT) \
+        sarpd-sad_inet.$(OBJEXT) sarpd-sad_crypto.$(OBJEXT) \
+        sarpd-sarp_crypto.$(OBJEXT) sarpd-sad_key.$(OBJEXT) \
+        sarpd-strlcpy.$(OBJEXT) sarpd-strlcat.$(OBJEXT) \
+        ../lib/libutil.a
+
+2. Changes in sad_neigh.c
+Define the inet_prefix struct
+Define the signature of get_addr()

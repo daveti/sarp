@@ -29,9 +29,30 @@
 #include <netinet/ip.h>
 
 #include <libnetlink.h>
-#include <utils.h>
+//daveti: comment the header, as utils.h is not available now
+//#include <utils.h>
+//daveti: new headers for libnetlink/netlink
+#include <netinet/in.h>
+#include <asm/types.h>
+#include <linux/netlink.h>
+#include <linux/rtnetlink.h>
 
 #include <pcap.h>
+
+//daveti: inet_prefix struct def
+//Suppose was in utils.h from libutil
+typedef struct
+{
+    __u8 family;
+    __u8 bytelen;
+    __s16 bitlen;
+    __u32 flags;
+    __u32 data[8];
+} inet_prefix;
+
+//daveti: signature for get_addr()
+//ported from iproute2/lib/utils.h
+extern int get_addr(inet_prefix *dst, const char *arg, int family);
 
 static struct {
 	int family;
@@ -247,7 +268,9 @@ int ipneigh_modify(int cmd, int flags, int nud, char *ll_addr, u_int32 ip, char 
    req.ndm.ndm_state = nud;
 
    /* add the IP */
-   
+  
+//daveti: get_addr should be provide by utils.h in libutil...
+//Now it is included in utils.h in iproute2 source tar.
    get_addr(&dst, inet_ntoa(*(struct in_addr *)&ip), AF_INET);
 	addattr_l(&req.n, sizeof(req), NDA_DST, &dst.data, dst.bytelen);
 

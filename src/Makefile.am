@@ -20,7 +20,7 @@ sarpd_SOURCES = sad_main.c \
                 sarp_crypto.c \
                 sad_key.c \
                 missing/strlcpy.c \
-                missing/strlcat.c 
+                missing/strlcat.c
 
 sarpd_CFLAGS = @SAD_CFLAGS@
 
