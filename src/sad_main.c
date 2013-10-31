@@ -98,7 +98,10 @@ int main(int argc, char *argv[])
    //WL initialize libnet
    char *dev;
    char errbuf[LIBNET_ERRBUF_SIZE];
-   dev = "eth0";
+//daveti: update to eth1 for our case
+   //dev = "eth0";
+   dev = "eth1";
+
    if ((l = init_packet_injection(dev,errbuf)) == NULL) {
      ERROR_MSG(errbuf);
    }

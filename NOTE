@@ -44,3 +44,6 @@ Update the sarp.ko to use /proc/sarp
 
 4. Changes in src
 Update the source to use /proc/sarp
+
+5. Changes in sad_main.c
+Update the dev from "eth0" to "eth1"
