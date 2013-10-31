@@ -1,0 +1,1 @@
+cmd_/home/daveti/sarp/master/kernel/module/sarp.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.2.0-56-generic/scripts/module-common.lds --build-id  -o /home/daveti/sarp/master/kernel/module/sarp.ko /home/daveti/sarp/master/kernel/module/sarp.o /home/daveti/sarp/master/kernel/module/sarp.mod.o

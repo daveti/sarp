@@ -2,7 +2,11 @@
 CC = @CC@
 INSTALL = @INSTALL@
 
-CFLAGS = -O2 -Wall -DARP_PACKET_TYPE_ADDR=`grep -w arp_packet_type /boot/System.map | awk {'print "0x"$$1'}`
+# daveti: udpate the system.map
+#CFLAGS = -O2 -Wall -DARP_PACKET_TYPE_ADDR=`grep -w arp_packet_type /boot/System.map | awk {'print "0x"$$1'}`
+KVER	:= $(shell uname -r)
+CFLAGS = -O2 -Wall -DARP_PACKET_TYPE_ADDR=`grep -w arp_packet_type /boot/System.map-$(KVER) | awk {'print "0x"$$1'}`
+
 
 all:
 	$(CC) -c -I/usr/src/linux/include $(CFLAGS) sarp.c -o sarp.o

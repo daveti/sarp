@@ -33,8 +33,9 @@
  
 */
 
-#define __KERNEL__
-#define MODULE
+//daveti: remove these below
+//#define __KERNEL__
+//#define MODULE
 
 //daveti: kernel version checking for autoconf.h
 #include <linux/version.h>
@@ -44,10 +45,11 @@
 #include <generated/autoconf.h>
 #endif
 //#include <linux/autoconf.h>
-#ifdef CONFIG_MODVERSIONS
-#include <linux/modversions.h>
-#endif
-#include <linux/config.h>
+//daveti: remove modversions.h and config.h
+//#ifdef CONFIG_MODVERSIONS
+//#include <linux/modversions.h>
+//#endif
+//#include <linux/config.h>
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/kernel.h>
@@ -61,9 +63,11 @@
 
 
 #define MODULE_NAME    "sarp"
-#define MODULE_VERSION "0.9"
-//daveti
-#define SARP_PROC_PATH "/proc/sarp"
+//daveti: rename module_version
+//#define MODULE_VERSION "0.9"
+#define SARP_VERSION "1.0"
+//daveti: unable to create a proc entry under /proc/sys/net/ipv4 using create_proc_entry...
+#define SARP_PROC_PATH "sarp"
 
 MODULE_AUTHOR("Alberto Ornaghi");
 MODULE_DESCRIPTION("Secure ARP");
@@ -130,11 +134,11 @@ int secure_arp_proc_read (char *buf, char **start, off_t offs, int len)
 {  
    int written;
    
-   MOD_INC_USE_COUNT;
+   //MOD_INC_USE_COUNT;
    
    written = sprintf(buf, "%d\n", secure_arp_enabled);
 
-   MOD_DEC_USE_COUNT;
+   //MOD_DEC_USE_COUNT;
    
    return written;
 }
@@ -145,7 +149,7 @@ ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length
    int i, value;
    char *message;
 
-   MOD_INC_USE_COUNT;
+   //MOD_INC_USE_COUNT;
 
    message = kmalloc(MESSAGE_LEN, GFP_KERNEL);
 
@@ -159,7 +163,7 @@ ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length
    switch(value) {
       case 1:   /* enable it */
          if (secure_arp_enabled) {
-            MOD_DEC_USE_COUNT;
+            //MOD_DEC_USE_COUNT;
             return i;
          }
          
@@ -168,7 +172,7 @@ ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length
          break;
       case 0:   /* disable it */
          if (!secure_arp_enabled) {
-            MOD_DEC_USE_COUNT;
+            //MOD_DEC_USE_COUNT;
             return i;
          }
    
@@ -176,12 +180,12 @@ ssize_t secure_arp_proc_write( struct file *file, const char *buf, size_t length
          
          break;
       default:  /* error */
-         MOD_DEC_USE_COUNT;
+         //MOD_DEC_USE_COUNT;
          return -1;
          break;
    }
   
-   MOD_DEC_USE_COUNT;
+   //MOD_DEC_USE_COUNT;
   
    return i;                                                
 }
@@ -198,14 +202,17 @@ static int __init sarp_init(void)
 //daveti: update the proc entry 
    //sarp_entry = create_proc_entry("sys/net/ipv4/sarp", 0644, NULL);
    sarp_entry = create_proc_entry(SARP_PROC_PATH, 0644, NULL);
-   
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
-   sarp_entry->owner = THIS_MODULE;
-#endif
+  
+//daveti: remove owner 
+//#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+//  sarp_entry->owner = THIS_MODULE;
+//#endif
    sarp_entry->read_proc = (read_proc_t *)&secure_arp_proc_read;
    sarp_entry->write_proc = (write_proc_t *)&secure_arp_proc_write;
-   
-   printk(KERN_INFO "%s %s module loaded\n", MODULE_NAME, MODULE_VERSION);
+  
+//daveti: update 
+   //printk(KERN_INFO "%s %s module loaded\n", MODULE_NAME, MODULE_VERSION);
+   printk(KERN_INFO "%s %s module loaded\n", MODULE_NAME, SARP_VERSION);
    return 0;
 }
 
@@ -218,16 +225,19 @@ static void __exit sarp_exit(void)
 
    if (secure_arp_enabled)
       disable_sarp();
-   
-   printk(KERN_INFO "%s %s removed\n", MODULE_NAME, MODULE_VERSION);
+  
+//daveti: update 
+   //printk(KERN_INFO "%s %s removed\n", MODULE_NAME, MODULE_VERSION);
+   printk(KERN_INFO "%s %s removed\n", MODULE_NAME, SARP_VERSION);
 }
 
-
-EXPORT_NO_SYMBOLS;
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+//daveti: update
+//EXPORT_NO_SYMBOLS;
+//#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
 module_init(sarp_init);
 module_exit(sarp_exit);
-#elif LINUX_VERSION_CODE < KERNEL_VERSION(2,4,0)
+//#elif LINUX_VERSION_CODE < KERNEL_VERSION(2,4,0)
+/*
 void cleanup_module(void)
 {
    sarp_exit();
@@ -238,6 +248,7 @@ int init_module(void)
    return sarp_init();
 }
 #endif
+*/
 
 /* EOF */
 

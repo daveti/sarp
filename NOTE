@@ -37,3 +37,10 @@ am_sarpd_OBJECTS = sarpd-sad_main.$(OBJEXT) sarpd-sad_debug.$(OBJEXT) \
 2. Changes in sad_neigh.c
 Define the inet_prefix struct
 Define the signature of get_addr()
+
+3. Changes in sarp kernel module
+Big changes in the Makefile
+Update the sarp.ko to use /proc/sarp
+
+4. Changes in src
+Update the source to use /proc/sarp

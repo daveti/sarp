@@ -116,6 +116,7 @@ int main(int argc, char *argv[])
    /* 
     * disable kernel reception of ARP packets via
     * /proc/sys/net/ipv4/sarp
+    * daveti: update to /proc/sarp
     */
    neigh_disable_kernel();
 

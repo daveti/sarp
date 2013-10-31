@@ -74,9 +74,12 @@ void check_configuration(void)
    DEBUG_MSG("check_configuration");
    
    /* check if the LKM was loaded */
-#if 0   
-   if ((fd = open("/proc/sys/net/ipv4/sarp", O_RDONLY)) == -1)
-      ERROR_MSG("can't access /proc/sys/net/ipv4/sarp");
+#if 0
+//daveti: update to /proc/sarp   
+//   if ((fd = open("/proc/sys/net/ipv4/sarp", O_RDONLY)) == -1)
+//      ERROR_MSG("can't access /proc/sys/net/ipv4/sarp");
+   if ((fd = open("/proc/sarp", O_RDONLY)) == -1)
+	ERROR_MSG("can't access /proc/sarp");
    else
       close(fd);
 #endif

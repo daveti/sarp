@@ -92,9 +92,12 @@ void neigh_disable_kernel(void)
    int fd;
 
    DEBUG_MSG("neigh_disable_kernel");
-   
-   if ((fd = open("/proc/sys/net/ipv4/sarp", O_WRONLY)) == -1)
-      ERROR_MSG("can't open /proc/sys/net/ipv4/sarp");
+  
+//daveti: update to /proc/sarp 
+//   if ((fd = open("/proc/sys/net/ipv4/sarp", O_WRONLY)) == -1)
+//      ERROR_MSG("can't open /proc/sys/net/ipv4/sarp");
+   if ((fd = open("/proc/sarp", O_WRONLY)) == -1)
+	ERROR_MSG("can't open /proc/sarp");
 
    if (write(fd, "1", 1) != 1)
       ERROR_MSG("can't enable secure arp");
@@ -114,9 +117,12 @@ void neigh_enable_kernel(void)
    int fd;
 
    DEBUG_MSG("neigh_enable_kernel");
-   
-   if ((fd = open("/proc/sys/net/ipv4/sarp", O_WRONLY)) == -1)
-      ERROR_MSG("can't open /proc/sys/net/ipv4/sarp");
+  
+//daveti: update to /proc/sarp 
+//   if ((fd = open("/proc/sys/net/ipv4/sarp", O_WRONLY)) == -1)
+//      ERROR_MSG("can't open /proc/sys/net/ipv4/sarp");
+   if ((fd = open("/proc/sarp", O_WRONLY)) == -1)
+	ERROR_MSG("can't open /proc/sarp");
 
    if (write(fd, "0", 1) != 1)
       ERROR_MSG("can't disable secure arp");
