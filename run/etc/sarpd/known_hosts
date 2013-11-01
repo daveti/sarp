@@ -1,0 +1,38 @@
+#########################################################
+#  known_hosts file
+#
+#  write here the list of hosts that don't support
+#  Secure ARP auth metod
+#
+#  this list will be parsed when a normal ARP reply
+#  is received, if the host is in the list, it will
+#  be considered authenticated
+#
+#########################################################
+#
+# the format is :
+#
+# <mac address><space><ip address>
+#
+# 01:01:01:01:01:01 192.168.0.1
+#
+
+
+#01:01:01:01:01:01 192.168.0.1
+#02:02:02:02:02:02 192.168.0.2
+#03:03:03:03:03:03 192.168.0.3
+#04:04:04:04:04:04 192.168.0.4
+#05:05:05:05:05:05 192.168.0.5
+#06:06:06:06:06:06 192.168.0.6
+
+#home
+00:a0:24:36:00:c3 192.168.0.1
+
+#lab
+00:20:af:90:ca:fa 10.0.0.1
+00:30:05:13:6e:0e 10.0.0.2
+
+# arpsec02
+b8:ca:3a:8e:38:44 128.223.6.113
+
+# eof

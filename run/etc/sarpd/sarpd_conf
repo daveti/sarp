@@ -1,0 +1,35 @@
+################################
+# Configuration file
+# 
+# Updated by daveti for arpsec
+# Nov 1, 2013
+# daveti@cs.uoregon.edu
+# http://davejingtian.org
+#
+################################
+
+# the file containing the public key of the CA for the specific
+# ethernet device. 
+#CAKey[eth0]: /etc/sarpd/id_sarp_ca.sarp
+CAKey[eth1]: /root/sarp/etc/sarpd/ca.sarp.pub
+#CAKey[eth2]: /etc/sarpd/id_sarp_ca.sarp
+
+
+# the file containing the PRIVATE key for this host.
+# this is unique on all the interfaces.
+# the parameter MUST be "all".
+MYKey[all]: /root/sarp/etc/sarpd/arpsec04.sarp
+
+
+# only for the CA.
+# the public key for the DHCP SARP enable server
+# this is needed to insert the host public key in the 
+# databasa. the DHCP will send us the pub key signed
+# with its private one
+# NOT IMPLEMENTED YET
+DHCPKey[eth0]: /etc/sarpd/id_sarp_dhcp.sarp
+
+# the key repository for the CA
+KEYDir[all]: /root/sarp/etc/sarpd/hosts
+
+#eof
