@@ -70,6 +70,55 @@ General options:
   -V, --version                prints the version and exit
   -h, --help                   this help screen
 
+sarp -g -o arpsec04		- Generate the original key pair
+sarp -s -i arpsec04.sarp	- Generate the self-signed sarp key
+
+root@arpsec04:~/sarp/etc/sarpd# ../../sarp -s -i ca.sarp
+
+sarp 0.0.9-devel (c) 2002 Alberto Ornaghi
+
+Insert the IP: 111.111.111.111
+
+Informaton below is needed only for the CA.
+Enter '0' for commnon hosts...
+
+Insert the Link Layer Address : 00:00:00:00:00:00
+
+
+Info file saved to ca.sarp.sarp
+
+root@arpsec04:~/sarp/etc/sarpd# ll
+total 48
+drwxr-xr-x 3 root root 4096 Nov  1 15:25 ./
+drwxr-xr-x 3 root root 4096 Nov  1 14:30 ../
+-rw-r--r-- 1 root root  673 Nov  1 14:30 arpsec03.sarp
+-rw-r--r-- 1 root root  679 Nov  1 14:30 arpsec03.sarp.pub
+-rw-r--r-- 1 root root  673 Nov  1 14:30 arpsec04.sarp
+-rw-r--r-- 1 root root  679 Nov  1 14:30 arpsec04.sarp.pub
+-rw-r--r-- 1 root root  673 Nov  1 14:30 ca.sarp
+-rw-r--r-- 1 root root  639 Nov  1 15:24 ca.sarp.pub
+-rw-r--r-- 1 root root  746 Nov  1 15:25 ca.sarp.sarp
+drwxr-xr-x 2 root root 4096 Nov  1 15:23 hosts/
+-rw-r--r-- 1 root root  856 Nov  1 14:30 known_hosts
+-rw-r--r-- 1 root root  919 Nov  1 14:30 sarpd_conf
+root@arpsec04:~/sarp/etc/sarpd# cat ca.sarp.sarp
+IP: 111.111.111.111
+LL: 00:00:00:00:00:00
+---BEGIN Secure ARP PUBLIC KEY---
+MIIBogKBgQCw82Ed9krdwnL/qDSVK0KCSRecozX5f+1X8x2tB/og+St9om81WQJc
+1FAmTqkf0ox47oczhlMPbnGMtwMgg0f3CDBE+KilQ4GTY6nFfkB1Ta15p8WVEIau
+LUrPfZoWDq1OwVN+3W/amiz2xkpl0A3alvoYhoqrrD+VMcm34GAI2gKBgQDaVVV6
+M/Z2VRj0JdjGRI3p9t38GVmIuw29Gv3gl0dOJGR4pjMG2aloeP1mIqLVif7kdSdg
+0qMLS3BGXRNQZBGTnrdLgucOEaNksuHbQyyDuE9zD2ehdy8Med+5Ee+JVXfmSLao
+IaSmFzfJlRjSq8Wq5kheUgvmg+hxCfNuADXDSwIVAL/VCE2+qh+4PjwkeX2xD1/t
+5sGjAoGAH4JYHHtZ33NvCR1Im3HYPGTCRydoJw1BKk3ToOYIif47taDqqNGYwYjN
+VFeDbAtj2MvGwJecyJbLHNbiCeNxPX774LvrhKVopFZPrT3dK+xa73XeGLC8hjNr
+E+RXsdjaW/vAW/JmsoIYIE9C0vldbfH+SbSU+54sWA2SsHR93pk=
+---END Secure ARP PUBLIC KEY---
+MC0CFQCrsm738JOp6r7fkMMZKXqVlvg0TQIUBukAFoccILvPoaJcmqC5qlmcxRc=
+root@arpsec04:~/sarp/etc/sarpd# 
+
+
 c. configure the config file for sarpd
 ./etc/sarpd/*
 d. start the sarpd
@@ -86,6 +135,8 @@ General options:
 
   -v, --version                prints the version and exit
   -h, --help                   this help screen
+
+./sarpd -c /root/sarp/etc/sarpd/sarpd_conf -k /root/sarp/etc/sarpd/known_hosts
 
 7. Running suite in action
 ./run
