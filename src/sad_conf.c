@@ -239,6 +239,9 @@ void load_conf(void)
    char *file;
 
    DEBUG_MSG("load_conf %s", GBL_OPTIONS->conf_file);
+
+//daveti: debug
+printf("daveti: load_conf() - [%s]\n", GBL_OPTIONS->conf_file);
    
    fd = fopen(GBL_OPTIONS->conf_file, "r");
    ON_ERROR(fd, "Can't open conf file : %s", GBL_OPTIONS->conf_file);
@@ -275,6 +278,9 @@ void load_conf(void)
       DEBUG_MSG("%s -- %s", key, file);
       
       if (!strcmp(key, "CAKey")) {
+//daveti
+	printf("daveti: load CAKey [%s]\n", file);
+
          u_int32 ip_addr;
          u_char ll_addr[LL_ADDR_LEN];
          DSA *dsa;
@@ -298,13 +304,21 @@ void load_conf(void)
       }
                       
       if (!strcmp(key, "MYKey"))
+//daveti
+{
+	printf("daveti: load MYKey [%s]\n", file);
          crypto_load_file(file, LOAD_PRIV, (DSA **)&GBL_CRYPTO_KEY);
+}
                       
       if (!strcmp(key, "DHCPKey"))
          DEBUG_MSG("DHCP support not yet implemented");
       
       if (!strcmp(key, "KEYDir") && GBL_OPTIONS->ca_mode) 
+//daveti
+{
+	printf("daveti: CA load keys from KEYDir [%s]\n", file);
          ca_load_keys(file);
+}
       
       
       SAFE_FREE(file);

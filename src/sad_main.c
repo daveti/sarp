@@ -81,6 +81,9 @@ int main(int argc, char *argv[])
     */
    
    daemonize();
+
+//daveti: debug
+printf("daemonize() done\n");
    
    DEBUG_MSG("daemon -- here we go !!");
    
@@ -129,6 +132,9 @@ int main(int argc, char *argv[])
     */
    
    neigh_flush_all_tables();
+
+//daveti: debug
+printf("neigh_flush_all_tables() done\n");
  
    /*
     * send the time syncronization request to 

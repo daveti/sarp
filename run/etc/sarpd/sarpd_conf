@@ -11,14 +11,14 @@
 # the file containing the public key of the CA for the specific
 # ethernet device. 
 #CAKey[eth0]: /etc/sarpd/id_sarp_ca.sarp
-CAKey[eth1]: /root/sarp/etc/sarpd/ca.sarp.sarp
+CAKey[eth1]: /root/sarp/etc/sarpd/arpsec04.sarp.sarp
 #CAKey[eth2]: /etc/sarpd/id_sarp_ca.sarp
 
 
 # the file containing the PRIVATE key for this host.
 # this is unique on all the interfaces.
 # the parameter MUST be "all".
-MYKey[all]: /root/sarp/etc/sarpd/arpsec04.sarp.sarp
+MYKey[all]: /root/sarp/etc/sarpd/arpsec04.sarp
 
 
 # only for the CA.

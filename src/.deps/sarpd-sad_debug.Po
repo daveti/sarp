@@ -100,7 +100,8 @@ sarpd-sad_debug.o: sad_debug.c ../include/sad_main.h ../include/config.h \
  /usr/include/openssl/bn.h /usr/include/openssl/dh.h \
  /usr/include/openssl/sha.h ../include/sarp_crypto.h \
  ../include/sad_syslog.h ../include/missing/strlcat.h \
- ../include/missing/strlcpy.h
+ ../include/missing/strlcpy.h /usr/include/x86_64-linux-gnu/sys/utsname.h \
+ /usr/include/x86_64-linux-gnu/bits/utsname.h ../include/sad_debug_info.h
 
 ../include/sad_main.h:
 
@@ -401,3 +402,9 @@ sarpd-sad_debug.o: sad_debug.c ../include/sad_main.h ../include/config.h \
 ../include/missing/strlcat.h:
 
 ../include/missing/strlcpy.h:
+
+/usr/include/x86_64-linux-gnu/sys/utsname.h:
+
+/usr/include/x86_64-linux-gnu/bits/utsname.h:
+
+../include/sad_debug_info.h:

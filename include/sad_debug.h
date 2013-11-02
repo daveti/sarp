@@ -2,6 +2,9 @@
 #if defined (DEBUG) && !defined(SAD_DEBUG_H)
 #define SAD_DEBUG_H
 
+//daveti: hack
+#define configure_debug	"daveti-hack-debug"
+
 extern void debug_init(void);
 extern void debug_msg(char *message, ...);
 extern char * hex_format(const u_char *buffer, int buff_len);

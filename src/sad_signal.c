@@ -163,20 +163,29 @@ void daemonize(void)
    if((signal(SIGTSTP, SIG_IGN)) == SIG_ERR)
       ERROR_MSG("signal(SIGTSTP)");
 
+//daveti: remove the forking
+/*
    if((pid = fork()) < 0)
       ERROR_MSG("fork() during daemonization");
    else if(pid != 0) {
       fprintf(stdout, "sarpd demonized with PID: %d", pid);
       exit(0);
    }
+*/
 
    /* here is the daemon */
 
+//daveti: hack the daemon
+/*
    if(setsid() == -1)
       ERROR_MSG("setsid()");
 
    close(fileno(stdin));
    close(fileno(stdout));
+*/
+
+//daveti: debug
+printf("daemon is urning with PID [%d]\n", getpid());
         
 }
 
