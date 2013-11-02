@@ -177,6 +177,9 @@ void sarp_get(u_char *u, const struct pcap_pkthdr *pkthdr, const u_char *pkt)
 //daveti: debug
 {
 		printf("daveti: got SARP from CA\n");
+		alarm(0);
+		printf("daveti: alarm timer should be stopped\n");
+
                   sarp_operation(arp);
 }
                

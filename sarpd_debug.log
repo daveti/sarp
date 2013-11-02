@@ -1,0 +1,214 @@
+
+==============================================================
+
+Configured with  :  ./configure dummy make 
+
+Detected options :  DEBUG  daveti-hack-debug 
+
+==============================================================
+
+-> sarpd 0.0.9-devel
+
+-> running on Linux 3.2.0-56-generic x86_64
+-> glibc version 2.15
+-> compiled with gcc 4.6
+
+
+DEVICE OPENED FOR sarpd DEBUGGING
+
+[ 8788]	main -- here we go !!
+[ 8788]	signal_handler activated
+[ 8788]	parse_options -- [0] [/root/git/master/src/sarpd]
+[ 8788]	parse_options -- [1] [-c]
+[ 8788]	parse_options -- [2] [/root/sarp/etc/sarpd/sarpd_conf]
+[ 8788]	parse_options -- [3] [-k]
+[ 8788]	parse_options -- [4] [/root/sarp/etc/sarpd/known_hosts]
+[ 8788]	check_configuration
+[ 8788]	daemonize
+[ 8788]	daemon -- here we go !!
+[ 8788]	capture_init
+[ 8788]	load_ifs: 2 iface loaded
+[ 8788]	load_configuration
+[ 8788]	flushing old known hosts
+[ 8788]	loading new known hosts from /root/sarp/etc/sarpd/known_hosts
+[ 8788]	load_conf /root/sarp/etc/sarpd/sarpd_conf
+[ 8788]	CAKey -- /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
+[ 8788]	crypto_load_sarp_file /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
+[ 8788]	SHA-1 time: 0 sec 13 usec
+[ 8788]	DSA_verify time: 0 sec 341 usec
+[ 8788]	crypto_verify_sign : success
+[ 8788]	crypto_load_sarp_file result: 0x7106df80 B8:CA:3A:8E:38:44
+[ 8788]	key_add: add 0x7106df80
+[ 8788]	ca_add 0x7106df80 B8:CA:3A:8E:38:44 on eth1
+[ 8788]	ca_add: add eth1
+[ 8788]	MYKey -- /root/sarp/etc/sarpd/arpsec04.sarp
+[ 8788]	DHCPKey -- /etc/sarpd/id_sarp_dhcp.sarp
+[ 8788]	DHCP support not yet implemented
+[ 8788]	KEYDir -- /root/sarp/etc/sarpd/hosts
+[ 8788]	crypto_init : calculating DSA kinv and r
+[ 8788]	crypto_init : initialized | our key is 1024 bits
+[ 8788]	neigh_disable_kernel
+[ 8788]	neigh_flush_all_tables
+[ 8788]	neigh_flush_table eth0
+[ 8788]	neigh_flush_table eth1
+[ 8788]	*** deleting 3 entries ***
+[ 8788]	sarp_send_time_request
+[ 8788]	get CA key eth1
+[ 8788]	send_to_wire eth1
+[ 8788]	send_to_wire: len = 12 : 12 0 0
+[ 8788]	send_to_wire: total len 0x0036
+[ 8788]	neverending loop (capture)
+[ 8788]	
+***************************************************************
+
+[ 8788]	sarp_get (one packet dispatched from pcap)
+[ 8788]	CAPTURED: 0x0066 bytes
+
+ 0000: 0000 0001 0006 b8ca 3a8e 3844 0000 0806  ........:.8D....
+ 0010: 0001 0800 0604 00ff 0000 0000 0000 80df  ................
+ 0020: 0671 b8ca 3a8e 39b3 0200 0000 7599 e11e  .q..:.9.....u...
+ 0030: 022e 0000 5275 885a 302c 0214 1425 2bc8  ....Ru.Z0,...%+.
+ 0040: 14b6 ac2c 1e8a cab7 8b50 465d 96d9 1c23  ...,.....PF]...#
+ 0050: 0214 7af4 8804 9849 199e a927 87e4 a0e9  ..z....I...'....
+ 0060: fb38 0982 059c                           .8....
+
+
+[ 8788]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8788]	PCAP real 0x0066 virtual [0x0066]
+[ 8788]	SARP OPERATION
+[ 8788]	 --> sha       00:00:00:00:00:00
+[ 8788]	 --> spa       128.223.6.113
+[ 8788]	 --> tha       B8:CA:3A:8E:39:B3
+[ 8788]	 --> tpa       2.0.0.0
+[ 8788]	 --> magic     0x7599e11e
+[ 8788]	 --> type      0x02
+[ 8788]	 --> datalen   0
+[ 8788]	 --> siglen    46
+[ 8788]	 --> timestamp 1383434330
+[ 8788]	SARPOP_TIME_REPLY
+[ 8788]	sarp_op_time_reply
+[ 8788]	sarp_verify_ca_sign
+[ 8788]	get CA key eth1
+[ 8788]	sarp_verify_ca_sign: slen 40 datalen 0 siglen 46
+[ 8788]	VERIFY:
+
+ 0000: 302c 0214 1425 2bc8 14b6 ac2c 1e8a cab7  0,...%+....,....
+ 0010: 8b50 465d 96d9 1c23 0214 7af4 8804 9849  .PF]...#..z....I
+ 0020: 199e a927 87e4 a0e9 fb38 0982 059c       ...'.....8....
+
+[ 8788]	SHA-1 time: 0 sec 1 usec
+[ 8788]	DSA_verify time: 0 sec 188 usec
+[ 8788]	crypto_verify_sign : success
+[ 8788]	sarp_set_delta: adjusting -31 sec
+[ 8788]	
+***************************************************************
+
+[ 8788]	sarp_get (one packet dispatched from pcap)
+[ 8788]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 70cd 60a9 f6b2 0000 0806  ......p.`.......
+ 0010: 0001 0800 0604 0001 70cd 60a9 f6b2 80df  ........p.`.....
+ 0020: 06f1 0000 0000 0000 80df 0601 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8788]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8788]	PCAP real 0x003e virtual [0x002c]
+[ 8788]	ARP REQUEST
+[ 8788]	 --> sha  70:CD:60:A9:F6:B2
+[ 8788]	 --> spa  128.223.6.241
+[ 8788]	 --> tha  00:00:00:00:00:00
+[ 8788]	 --> tpa  128.223.6.1
+[ 8788]	daveti: arp_request done
+[ 8788]	
+***************************************************************
+
+[ 8788]	sarp_get (one packet dispatched from pcap)
+[ 8788]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 0003 bac0 f579 0000 0806  ...........y....
+ 0010: 0001 0800 0604 0002 0003 bac0 f579 80df  .............y..
+ 0020: 0609 b8ca 3a8e 3996 80df 063e 0000 0000  ....:.9....>....
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8788]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8788]	PCAP real 0x003e virtual [0x002c]
+[ 8788]	arp_reply
+[ 8788]	daveti: arp_reply ESARP_NOTFOUND done
+[ 8788]	
+***************************************************************
+
+[ 8788]	sarp_get (one packet dispatched from pcap)
+[ 8788]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 00d0 0195 dc00 0000 0806  ................
+ 0010: 0001 0800 0604 0001 00d0 0195 dc00 80df  ................
+ 0020: 0603 0000 0000 0000 80df 0670 0000 0000  ...........p....
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8788]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8788]	PCAP real 0x003e virtual [0x002c]
+[ 8788]	ARP REQUEST
+[ 8788]	 --> sha  00:D0:01:95:DC:00
+[ 8788]	 --> spa  128.223.6.3
+[ 8788]	 --> tha  00:00:00:00:00:00
+[ 8788]	 --> tpa  128.223.6.112
+[ 8788]	daveti: arp_request done
+[ 8788]	
+***************************************************************
+
+[ 8788]	sarp_get (one packet dispatched from pcap)
+[ 8788]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 00d0 0195 e000 0000 0806  ................
+ 0010: 0001 0800 0604 0001 00d0 0195 e000 80df  ................
+ 0020: 0602 0000 0000 0000 80df 0633 0000 0000  ...........3....
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8788]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8788]	PCAP real 0x003e virtual [0x002c]
+[ 8788]	ARP REQUEST
+[ 8788]	 --> sha  00:D0:01:95:E0:00
+[ 8788]	 --> spa  128.223.6.2
+[ 8788]	 --> tha  00:00:00:00:00:00
+[ 8788]	 --> tpa  128.223.6.51
+[ 8788]	daveti: arp_request done
+[ 8788]	neigh_enable_kernel
