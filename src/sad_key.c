@@ -100,7 +100,13 @@ void ca_add(char *iface, u_int32 ip_addr, u_char *ll_addr, DSA *key)
    }
 
    DEBUG_MSG("ca_add 0x%08x %s on %s", ip_addr, ha_ntoa(ll_addr), iface);
-  
+ 
+//daveti: debug
+printf("daveti: ca_add [%s] [%s] on [%s]\n",
+	pa_ntoa((u_char *)&ip_addr),
+	ha_ntoa(ll_addr),
+	iface);
+ 
    /* 
     * do some sanity check on the vaule passed
     * from conf file...
@@ -516,9 +522,12 @@ void send_time_request(void)
     * the SIGALRM is set to INGORE upon reception
     * of all the CA replies
     */
-   
+  
    alarm(5);   /* 5 seconds of timeout */
-   
+  
+//daveti: debug
+printf("daveti: alarm(5) from send_time_request\n");
+ 
 }
 
 /*

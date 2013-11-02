@@ -52,6 +52,9 @@ void signal_handler(void)
 
 RETSIGTYPE signal_SEGV(int sig)
 {
+//daveti: debug
+printf("daveti: into signal_SEGV()\n");
+
 #ifdef DEBUG
 
    struct rlimit corelimit = {RLIM_INFINITY, RLIM_INFINITY};

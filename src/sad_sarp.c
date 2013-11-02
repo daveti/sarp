@@ -174,7 +174,11 @@ void sarp_get(u_char *u, const struct pcap_pkthdr *pkthdr, const u_char *pkt)
                 * will ingnore this type of packets.
                 */
                if (sarp->magic == ntohl(SARP_MAGIC))
+//daveti: debug
+{
+		printf("daveti: got SARP from CA\n");
                   sarp_operation(arp);
+}
                
                break;
    }
@@ -254,6 +258,10 @@ void arp_request(struct libnet_arp_hdr *arp)
    }
    
    SAFE_FREE(iface);
+
+//daveti: debug
+DEBUG_MSG("daveti: arp_request done");
+
 }
 
 /*
@@ -275,6 +283,9 @@ void arp_reply(struct libnet_arp_hdr *arp)
    
    if (own_this_address(*(u_int32 *)&earp->arp_spa, &iface) == ESARP_SUCCESS) {
       SAFE_FREE(iface);
+//daveti: debug
+DEBUG_MSG("daveti: arp_reply ESARP_SUCCESS done");
+
       return;
    }
  
@@ -283,7 +294,11 @@ void arp_reply(struct libnet_arp_hdr *arp)
     */
    
    if (own_this_address(*(u_int32 *)&earp->arp_tpa, &iface) == -ESARP_NOTFOUND)
+//daveti: debug
+{
+DEBUG_MSG("daveti: arp_reply ESARP_NOTFOUND done");
       return;
+}
   
    SAFE_FREE(iface);
    
@@ -292,7 +307,11 @@ void arp_reply(struct libnet_arp_hdr *arp)
     */
    
    if (belong_to_iface(*(u_int32 *)&earp->arp_spa, &iface) == -ESARP_NOTFOUND) 
+//daveti: debug
+{
+DEBUG_MSG("daveti: arp_reply belog to ESARP_NOTFOUND done");
       return;
+}
    
    DEBUG_MSG("ARP REPLY");
    DEBUG_MSG(" --> sha  %s", ha_ntoa(earp->arp_sha));
@@ -320,6 +339,10 @@ void arp_reply(struct libnet_arp_hdr *arp)
    }
            
    SAFE_FREE(iface);
+
+//daveti: debug
+DEBUG_MSG("daveti: arp_reply done");
+
 }
 
 /*

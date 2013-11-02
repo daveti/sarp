@@ -110,8 +110,15 @@ void capture(void)
     * infinite loop 
     * dispatch packets to sarp_get
     */
+
+//daveti: debug
+printf("daveti: into pcap_loop()\n");
         
    pcap_loop(GBL_PCAP->fd, -1, sarp_get, NULL);
+
+//daveti: debug
+printf("daveti: pcap_loop() done\n");
+
 }
 
 

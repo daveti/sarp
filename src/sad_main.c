@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
    daemonize();
 
 //daveti: debug
-printf("daemonize() done\n");
+printf("daveti: daemonize() done\n");
    
    DEBUG_MSG("daemon -- here we go !!");
    
@@ -134,7 +134,7 @@ printf("daemonize() done\n");
    neigh_flush_all_tables();
 
 //daveti: debug
-printf("neigh_flush_all_tables() done\n");
+printf("daveti: neigh_flush_all_tables() done\n");
  
    /*
     * send the time syncronization request to 
@@ -149,7 +149,10 @@ printf("neigh_flush_all_tables() done\n");
    send_time_request();
    
    atexit(sad_shutdown);
-   
+  
+//daveti: debug
+printf("daveti: go into capture()\n");
+ 
    /*
     * go !
     * start capturing packets.
@@ -159,6 +162,9 @@ printf("neigh_flush_all_tables() done\n");
    capture();
   
    /* NOT REACHED */      
+
+//daveti: debug
+printf("daveti: capture() done\n");
 
    return 0;
 }

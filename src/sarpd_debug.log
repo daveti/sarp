@@ -16,53 +16,53 @@ Detected options :  DEBUG  daveti-hack-debug
 
 DEVICE OPENED FOR sarpd DEBUGGING
 
-[ 7872]	main -- here we go !!
-[ 7872]	signal_handler activated
-[ 7872]	parse_options -- [0] [./sarpd]
-[ 7872]	parse_options -- [1] [-c]
-[ 7872]	parse_options -- [2] [/root/sarp/etc/sarpd/sarpd_conf]
-[ 7872]	parse_options -- [3] [-k]
-[ 7872]	parse_options -- [4] [/root/sarp/etc/sarpd/known_hosts]
-[ 7872]	check_configuration
-[ 7872]	daemonize
-[ 7872]	daemon -- here we go !!
-[ 7872]	capture_init
-[ 7872]	load_ifs: 2 iface loaded
-[ 7872]	load_configuration
-[ 7872]	flushing old known hosts
-[ 7872]	loading new known hosts from /root/sarp/etc/sarpd/known_hosts
-[ 7872]	load_conf /root/sarp/etc/sarpd/sarpd_conf
-[ 7872]	CAKey -- /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
-[ 7872]	crypto_load_sarp_file /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
-[ 7872]	SHA-1 time: 0 sec 14 usec
-[ 7872]	DSA_verify time: 0 sec 335 usec
-[ 7872]	crypto_verify_sign : success
-[ 7872]	crypto_load_sarp_file result: 0x7106df80 00:00:00:00:00:00
-[ 7872]	key_add: add 0x7106df80
-[ 7872]	ca_add 0x7106df80 00:00:00:00:00:00 on eth1
-[ 7872]	ca_add: add eth1
-[ 7872]	MYKey -- /root/sarp/etc/sarpd/arpsec04.sarp
-[ 7872]	DHCPKey -- /etc/sarpd/id_sarp_dhcp.sarp
-[ 7872]	DHCP support not yet implemented
-[ 7872]	KEYDir -- /root/sarp/etc/sarpd/hosts
-[ 7872]	crypto_init : calculating DSA kinv and r
-[ 7872]	crypto_init : initialized | our key is 1024 bits
-[ 7872]	neigh_disable_kernel
-[ 7872]	neigh_flush_all_tables
-[ 7872]	neigh_flush_table eth0
-[ 7872]	neigh_flush_table eth1
-[ 7872]	*** deleting 1 entries ***
-[ 7872]	sarp_send_time_request
-[ 7872]	get CA key eth1
-[ 7872]	send_to_wire eth1
-[ 7872]	send_to_wire: len = 12 : 12 0 0
-[ 7872]	send_to_wire: total len 0x0036
-[ 7872]	neverending loop (capture)
-[ 7872]	
+[ 8726]	main -- here we go !!
+[ 8726]	signal_handler activated
+[ 8726]	parse_options -- [0] [/root/git/master/src/sarpd]
+[ 8726]	parse_options -- [1] [-c]
+[ 8726]	parse_options -- [2] [/root/sarp/etc/sarpd/sarpd_conf]
+[ 8726]	parse_options -- [3] [-k]
+[ 8726]	parse_options -- [4] [/root/sarp/etc/sarpd/known_hosts]
+[ 8726]	check_configuration
+[ 8726]	daemonize
+[ 8726]	daemon -- here we go !!
+[ 8726]	capture_init
+[ 8726]	load_ifs: 2 iface loaded
+[ 8726]	load_configuration
+[ 8726]	flushing old known hosts
+[ 8726]	loading new known hosts from /root/sarp/etc/sarpd/known_hosts
+[ 8726]	load_conf /root/sarp/etc/sarpd/sarpd_conf
+[ 8726]	CAKey -- /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
+[ 8726]	crypto_load_sarp_file /root/sarp/etc/sarpd/arpsec02.ca.sarp.sarp
+[ 8726]	SHA-1 time: 0 sec 14 usec
+[ 8726]	DSA_verify time: 0 sec 341 usec
+[ 8726]	crypto_verify_sign : success
+[ 8726]	crypto_load_sarp_file result: 0x7106df80 B8:CA:3A:8E:38:44
+[ 8726]	key_add: add 0x7106df80
+[ 8726]	ca_add 0x7106df80 B8:CA:3A:8E:38:44 on eth1
+[ 8726]	ca_add: add eth1
+[ 8726]	MYKey -- /root/sarp/etc/sarpd/arpsec04.sarp
+[ 8726]	DHCPKey -- /etc/sarpd/id_sarp_dhcp.sarp
+[ 8726]	DHCP support not yet implemented
+[ 8726]	KEYDir -- /root/sarp/etc/sarpd/hosts
+[ 8726]	crypto_init : calculating DSA kinv and r
+[ 8726]	crypto_init : initialized | our key is 1024 bits
+[ 8726]	neigh_disable_kernel
+[ 8726]	neigh_flush_all_tables
+[ 8726]	neigh_flush_table eth0
+[ 8726]	neigh_flush_table eth1
+[ 8726]	*** deleting 2 entries ***
+[ 8726]	sarp_send_time_request
+[ 8726]	get CA key eth1
+[ 8726]	send_to_wire eth1
+[ 8726]	send_to_wire: len = 12 : 12 0 0
+[ 8726]	send_to_wire: total len 0x0036
+[ 8726]	neverending loop (capture)
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
  0000: 0001 0001 0006 00d0 0195 dc00 0000 0806  ................
  0010: 0001 0800 0604 0001 00d0 0195 dc00 80df  ................
@@ -70,7 +70,7 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -78,25 +78,26 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:DC:00
-[ 7872]	 --> spa  128.223.6.3
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.112
-[ 7872]	
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  00:D0:01:95:DC:00
+[ 8726]	 --> spa  128.223.6.3
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.112
+[ 8726]	daveti: arp_request done
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
- 0000: 0001 0001 0006 00d0 0195 dc00 0000 0806  ................
- 0010: 0001 0800 0604 0001 00d0 0195 dc00 80df  ................
- 0020: 0603 0000 0000 0000 80df 06f9 0000 0000  ................
+ 0000: 0001 0001 0006 c8bc c89e 67df 0000 0806  ..........g.....
+ 0010: 0001 0800 0604 0001 c8bc c89e 67df 80df  ............g...
+ 0020: 06a5 0000 0000 0000 80df 0601 0000 0000  ................
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -104,25 +105,26 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:DC:00
-[ 7872]	 --> spa  128.223.6.3
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.249
-[ 7872]	
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  C8:BC:C8:9E:67:DF
+[ 8726]	 --> spa  128.223.6.165
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.1
+[ 8726]	daveti: arp_request done
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
  0000: 0001 0001 0006 00d0 0195 e000 0000 0806  ................
  0010: 0001 0800 0604 0001 00d0 0195 e000 80df  ................
- 0020: 0602 0000 0000 0000 80df 0670 0000 0000  ...........p....
+ 0020: 0602 0000 0000 0000 80df 06fb 0000 0000  ................
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -130,25 +132,26 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:E0:00
-[ 7872]	 --> spa  128.223.6.2
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.112
-[ 7872]	
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  00:D0:01:95:E0:00
+[ 8726]	 --> spa  128.223.6.2
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.251
+[ 8726]	daveti: arp_request done
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
  0000: 0001 0001 0006 00d0 0195 e000 0000 0806  ................
  0010: 0001 0800 0604 0001 00d0 0195 e000 80df  ................
- 0020: 0602 0000 0000 0000 80df 06f9 0000 0000  ................
+ 0020: 0602 0000 0000 0000 80df 0607 0000 0000  ................
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -156,25 +159,26 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:E0:00
-[ 7872]	 --> spa  128.223.6.2
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.249
-[ 7872]	
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  00:D0:01:95:E0:00
+[ 8726]	 --> spa  128.223.6.2
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.7
+[ 8726]	daveti: arp_request done
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
- 0000: 0001 0001 0006 00d0 0195 e000 0000 0806  ................
- 0010: 0001 0800 0604 0001 00d0 0195 e000 80df  ................
- 0020: 0602 0000 0000 0000 80df 06c4 0000 0000  ................
+ 0000: 0001 0001 0006 0003 bac0 f579 0000 0806  ...........y....
+ 0010: 0001 0800 0604 0002 0003 bac0 f579 80df  .............y..
+ 0020: 0609 b8ca 3a8e 3996 80df 063e 0000 0000  ....:.9....>....
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -182,17 +186,14 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:E0:00
-[ 7872]	 --> spa  128.223.6.2
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.196
-[ 7872]	
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	arp_reply
+[ 8726]	daveti: arp_reply ESARP_NOTFOUND done
+[ 8726]	
 ***************************************************************
 
-[ 7872]	sarp_get (one packet dispatched from pcap)
-[ 7872]	CAPTURED: 0x003e bytes
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
 
  0000: 0001 0001 0006 00d0 0195 dc00 0000 0806  ................
  0010: 0001 0800 0604 0001 00d0 0195 dc00 80df  ................
@@ -200,7 +201,7 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000       ..............
 
 
-[ 7872]	OOR: 0x0040 bytes
+[ 8726]	OOR: 0x0040 bytes
 
  0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
  0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
@@ -208,10 +209,65 @@ DEVICE OPENED FOR sarpd DEBUGGING
  0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
 
 
-[ 7872]	PCAP real 0x003e virtual [0x002c]
-[ 7872]	ARP REQUEST
-[ 7872]	 --> sha  00:D0:01:95:DC:00
-[ 7872]	 --> spa  128.223.6.3
-[ 7872]	 --> tha  00:00:00:00:00:00
-[ 7872]	 --> tpa  128.223.6.112
-[ 7872]	neigh_enable_kernel
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  00:D0:01:95:DC:00
+[ 8726]	 --> spa  128.223.6.3
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.112
+[ 8726]	daveti: arp_request done
+[ 8726]	
+***************************************************************
+
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 70cd 60f2 f0b2 0000 0806  ......p.`.......
+ 0010: 0001 0800 0604 0001 70cd 60f2 f0b2 80df  ........p.`.....
+ 0020: 06c1 0000 0000 0000 80df 0601 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8726]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  70:CD:60:F2:F0:B2
+[ 8726]	 --> spa  128.223.6.193
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.1
+[ 8726]	daveti: arp_request done
+[ 8726]	
+***************************************************************
+
+[ 8726]	sarp_get (one packet dispatched from pcap)
+[ 8726]	CAPTURED: 0x003e bytes
+
+ 0000: 0001 0001 0006 00d0 0195 e000 0000 0806  ................
+ 0010: 0001 0800 0604 0001 00d0 0195 e000 80df  ................
+ 0020: 0602 0000 0000 0000 80df 06fb 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000       ..............
+
+
+[ 8726]	OOR: 0x0040 bytes
+
+ 0000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+ 0030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+
+
+[ 8726]	PCAP real 0x003e virtual [0x002c]
+[ 8726]	ARP REQUEST
+[ 8726]	 --> sha  00:D0:01:95:E0:00
+[ 8726]	 --> spa  128.223.6.2
+[ 8726]	 --> tha  00:00:00:00:00:00
+[ 8726]	 --> tpa  128.223.6.251
+[ 8726]	daveti: arp_request done
+[ 8726]	neigh_enable_kernel
