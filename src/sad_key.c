@@ -238,7 +238,9 @@ int key_add( u_int32 ip_addr, DSA *key)
  * return ESARP_SUCCESS on success
  *       -ESARP_NOTFOUND on failure
  */
-#define NO_CACHE
+//daveti: let's use cache
+//#define NO_CACHE
+
 int get_key( u_int32 ip_addr, DSA **key)
 {
    struct keys_entry *e;
@@ -247,16 +249,23 @@ int get_key( u_int32 ip_addr, DSA **key)
       if ( e->ip_addr == ip_addr ) {
          *key = DSA_dup(e->key);
          DEBUG_MSG("get key 0x%08x : found", ip_addr);
+
+//daveti: NOTE - the cache should only work for non-CA!
+//The cache for CA should be static and always be there!
+
 	 //WL: add this code to implement NO caching option
 	 //effectively we delete the key once it is returned
 	 //This way the key is only used once
 	 #ifdef NO_CACHE
 //daveti: This should be the reason why the key is missing...
-printf("daveti: get_key found key [0x%x] and then removed\n", ip_addr);
-DEBUG_MSG("daveti: get_key found key [0x%x] and then removed", ip_addr);
+if (GBL_OPTIONS->ca_mode)
+{
+	printf("daveti: CA get_key found key [0x%x] and then removed\n", ip_addr);
+	DEBUG_MSG("daveti: CA get_key found key [0x%x] and then removed", ip_addr);
 
 	 e->ip_addr = 0;
 	 DSA_free(e->key);
+}
 	 #endif
          return ESARP_SUCCESS;
       }
