@@ -739,11 +739,19 @@ void sarp_op_key_request(struct libnet_arp_hdr *arp)
    
    /* retrive the appropriate key */
    if (get_key(ip_addr, &dsa) == ESARP_SUCCESS) {
+//daveti: debug
+printf("daveti: got key for [%d] [%s]\n", ip_addr, pa_ntoa(ip_addr));
+DEBUG_MSG("daveti: got key for [%d] [%s]", ip_addr, pa_ntoa(ip_addr));
+
       sarp->type = SARPOP_KEY_REPLY;
       /* put the binary Public Key in the right buffer */
       sarp->datalen = htons(i2d_DSAPublicKey(dsa, &data));
       DEBUG_MSG("sarp_op_key_request: success");
    } else {
+//daveti: debug
+printf("daveti: got NO key for [%d] [%s]\n", ip_addr, pa_ntoa(ip_addr));
+DEBUG_MSG("daveti: got NO key for [%d] [%s]", ip_addr, pa_ntoa(ip_addr));
+
       sarp->type = SARPOP_KEY_REPLY | SARPOP_KEY_NOTFOUND;
       sarp->datalen = 0;
       DEBUG_MSG("sarp_op_key_request: NOT FOUND");
@@ -849,6 +857,10 @@ void sarp_op_key_reply(struct libnet_arp_hdr *arp)
        */
            
       sad_syslog("%s is not registered on the CA", pa_ntoa(earp->arp_spa) );
+
+//daveti: debug
+printf("daveti: SARPOP_KEY_NOTFOUND - [%s] not registered on the CA\n", pa_ntoa(earp->arp_spa));
+DEBUG_MSG("daveti: SARPOP_KEY_NOTFOUND - [%s] not registered on the CA", pa_ntoa(earp->arp_spa));
 
       /*
        * we can try to check if it is in the known_host file...
