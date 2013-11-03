@@ -251,6 +251,10 @@ int get_key( u_int32 ip_addr, DSA **key)
 	 //effectively we delete the key once it is returned
 	 //This way the key is only used once
 	 #ifdef NO_CACHE
+//daveti: This should be the reason why the key is missing...
+printf("daveti: get_key found key [0x%x] and then removed\n", ip_addr);
+DEBUG_MSG("daveti: get_key found key [0x%x] and then removed", ip_addr);
+
 	 e->ip_addr = 0;
 	 DSA_free(e->key);
 	 #endif
