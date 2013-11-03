@@ -159,7 +159,12 @@ void sarp_get(u_char *u, const struct pcap_pkthdr *pkthdr, const u_char *pkt)
                    * if the arp reply has the "magic" payload, 
                    * it is a S-ARP reply, checkit.
                    */
-                  sarp_reply(arp); 
+//daveti: debug
+{
+		printf("daveti: got SARP reply\n");
+
+                  sarp_reply(arp);
+}
                else
                   arp_reply(arp);   /* someone is using old style ARP
                                      * check in the known_host file
@@ -356,7 +361,10 @@ void sarp_reply(struct libnet_arp_hdr *arp)
 {
    struct fixed_ether_arp *earp;
    char *iface = NULL;
-    
+   
+//daveti: debug
+printf("daveti: sarp_reply()\n");
+ 
    DEBUG_MSG("sarp_reply");
    
    earp = (struct fixed_ether_arp *)arp;
