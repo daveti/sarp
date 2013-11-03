@@ -740,8 +740,8 @@ void sarp_op_key_request(struct libnet_arp_hdr *arp)
    /* retrive the appropriate key */
    if (get_key(ip_addr, &dsa) == ESARP_SUCCESS) {
 //daveti: debug
-printf("daveti: got key for [%d] [%s]\n", ip_addr, pa_ntoa(ip_addr));
-DEBUG_MSG("daveti: got key for [%d] [%s]", ip_addr, pa_ntoa(ip_addr));
+printf("daveti: got key for [%d] [%s]\n", ip_addr, pa_ntoa(earp->arp_tpa));
+DEBUG_MSG("daveti: got key for [%d] [%s]", ip_addr, pa_ntoa(earp->arp_tpa));
 
       sarp->type = SARPOP_KEY_REPLY;
       /* put the binary Public Key in the right buffer */
@@ -749,8 +749,8 @@ DEBUG_MSG("daveti: got key for [%d] [%s]", ip_addr, pa_ntoa(ip_addr));
       DEBUG_MSG("sarp_op_key_request: success");
    } else {
 //daveti: debug
-printf("daveti: got NO key for [%d] [%s]\n", ip_addr, pa_ntoa(ip_addr));
-DEBUG_MSG("daveti: got NO key for [%d] [%s]", ip_addr, pa_ntoa(ip_addr));
+printf("daveti: got NO key for [%d] [%s]\n", ip_addr, pa_ntoa(earp->arp_tpa));
+DEBUG_MSG("daveti: got NO key for [%d] [%s]", ip_addr, pa_ntoa(earp->arp_tpa));
 
       sarp->type = SARPOP_KEY_REPLY | SARPOP_KEY_NOTFOUND;
       sarp->datalen = 0;
