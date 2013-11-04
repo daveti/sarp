@@ -239,7 +239,8 @@ int key_add( u_int32 ip_addr, DSA *key)
  *       -ESARP_NOTFOUND on failure
  */
 //daveti: let's use cache
-//#define NO_CACHE
+//daveti: disable cache for non-CAs
+#define NO_CACHE
 
 int get_key( u_int32 ip_addr, DSA **key)
 {
