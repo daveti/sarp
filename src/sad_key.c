@@ -259,7 +259,7 @@ int get_key( u_int32 ip_addr, DSA **key)
 	 //This way the key is only used once
 	 #ifdef NO_CACHE
 //daveti: This should be the reason why the key is missing...
-if (GBL_OPTIONS->ca_mode)
+if (!(GBL_OPTIONS->ca_mode))
 {
 	printf("daveti: CA get_key found key [0x%x] and then removed\n", ip_addr);
 	DEBUG_MSG("daveti: CA get_key found key [0x%x] and then removed", ip_addr);
