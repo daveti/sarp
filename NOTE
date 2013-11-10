@@ -155,4 +155,7 @@ To remove the debug, please remove the debug definition in config.h
 Fixed a bug on cache option for CA.
 Check sad_sarp.c for get_key if cache is to be enabled/disabled
 
+12. Time performance measurement
+./run/key_gen_perf.sh
+./run/perf.py
 

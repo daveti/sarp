@@ -30,6 +30,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+//daveti: timing for key gen
+#include <sys/time.h>
+
 /* protos */
 
 void generate_keypair(void);
@@ -87,8 +90,19 @@ void generate_keypair(void)
    /*
     * prepare the key pair
     */
-   
+  
+//daveti: add time measurement for this function 
+struct timeval tpstart,tpend;
+float timeuse = 0;
+gettimeofday(&tpstart,NULL);
+
    crypto_genkeypair(&pub, &priv);
+
+gettimeofday(&tpend,NULL);
+timeuse=1000000*(tpend.tv_sec-tpstart.tv_sec)+tpend.tv_usec-tpstart.tv_usec;
+timeuse/=1000000;
+printf("Total time on crypto_genkeypair() is [%f] ms\n", timeuse);
+
 
    /*
     * if not specified on command line, the file

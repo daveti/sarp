@@ -1,0 +1,1300 @@
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.109282] ms
+
+Keypair saved to perf_1 and perf_1.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.043661] ms
+
+Keypair saved to perf_2 and perf_2.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.046753] ms
+
+Keypair saved to perf_3 and perf_3.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.058037] ms
+
+Keypair saved to perf_4 and perf_4.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.075399] ms
+
+Keypair saved to perf_5 and perf_5.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.129792] ms
+
+Keypair saved to perf_6 and perf_6.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.114356] ms
+
+Keypair saved to perf_7 and perf_7.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.092367] ms
+
+Keypair saved to perf_8 and perf_8.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.049760] ms
+
+Keypair saved to perf_9 and perf_9.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.091166] ms
+
+Keypair saved to perf_10 and perf_10.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.134917] ms
+
+Keypair saved to perf_11 and perf_11.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.166623] ms
+
+Keypair saved to perf_12 and perf_12.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.101944] ms
+
+Keypair saved to perf_13 and perf_13.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.161049] ms
+
+Keypair saved to perf_14 and perf_14.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.180146] ms
+
+Keypair saved to perf_15 and perf_15.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.048914] ms
+
+Keypair saved to perf_16 and perf_16.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.144709] ms
+
+Keypair saved to perf_17 and perf_17.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.059956] ms
+
+Keypair saved to perf_18 and perf_18.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.042436] ms
+
+Keypair saved to perf_19 and perf_19.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.090759] ms
+
+Keypair saved to perf_20 and perf_20.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.176104] ms
+
+Keypair saved to perf_21 and perf_21.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.101889] ms
+
+Keypair saved to perf_22 and perf_22.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.086424] ms
+
+Keypair saved to perf_23 and perf_23.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.064278] ms
+
+Keypair saved to perf_24 and perf_24.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.063319] ms
+
+Keypair saved to perf_25 and perf_25.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.070947] ms
+
+Keypair saved to perf_26 and perf_26.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.118622] ms
+
+Keypair saved to perf_27 and perf_27.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.131952] ms
+
+Keypair saved to perf_28 and perf_28.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.101325] ms
+
+Keypair saved to perf_29 and perf_29.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.096993] ms
+
+Keypair saved to perf_30 and perf_30.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.050265] ms
+
+Keypair saved to perf_31 and perf_31.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.065567] ms
+
+Keypair saved to perf_32 and perf_32.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.138631] ms
+
+Keypair saved to perf_33 and perf_33.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.103655] ms
+
+Keypair saved to perf_34 and perf_34.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.057320] ms
+
+Keypair saved to perf_35 and perf_35.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.038240] ms
+
+Keypair saved to perf_36 and perf_36.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.060258] ms
+
+Keypair saved to perf_37 and perf_37.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.088538] ms
+
+Keypair saved to perf_38 and perf_38.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.102778] ms
+
+Keypair saved to perf_39 and perf_39.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.071910] ms
+
+Keypair saved to perf_40 and perf_40.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.065118] ms
+
+Keypair saved to perf_41 and perf_41.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.040063] ms
+
+Keypair saved to perf_42 and perf_42.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.213945] ms
+
+Keypair saved to perf_43 and perf_43.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.062900] ms
+
+Keypair saved to perf_44 and perf_44.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.075853] ms
+
+Keypair saved to perf_45 and perf_45.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.074890] ms
+
+Keypair saved to perf_46 and perf_46.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.099132] ms
+
+Keypair saved to perf_47 and perf_47.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.069374] ms
+
+Keypair saved to perf_48 and perf_48.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.080258] ms
+
+Keypair saved to perf_49 and perf_49.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.118180] ms
+
+Keypair saved to perf_50 and perf_50.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.044138] ms
+
+Keypair saved to perf_51 and perf_51.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.064380] ms
+
+Keypair saved to perf_52 and perf_52.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.078845] ms
+
+Keypair saved to perf_53 and perf_53.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.115868] ms
+
+Keypair saved to perf_54 and perf_54.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.056071] ms
+
+Keypair saved to perf_55 and perf_55.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.043493] ms
+
+Keypair saved to perf_56 and perf_56.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.102705] ms
+
+Keypair saved to perf_57 and perf_57.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.052118] ms
+
+Keypair saved to perf_58 and perf_58.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.044400] ms
+
+Keypair saved to perf_59 and perf_59.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.052681] ms
+
+Keypair saved to perf_60 and perf_60.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.080692] ms
+
+Keypair saved to perf_61 and perf_61.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.055974] ms
+
+Keypair saved to perf_62 and perf_62.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.154524] ms
+
+Keypair saved to perf_63 and perf_63.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.044962] ms
+
+Keypair saved to perf_64 and perf_64.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.087106] ms
+
+Keypair saved to perf_65 and perf_65.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.096457] ms
+
+Keypair saved to perf_66 and perf_66.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.043258] ms
+
+Keypair saved to perf_67 and perf_67.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.076615] ms
+
+Keypair saved to perf_68 and perf_68.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.051384] ms
+
+Keypair saved to perf_69 and perf_69.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.072512] ms
+
+Keypair saved to perf_70 and perf_70.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.060436] ms
+
+Keypair saved to perf_71 and perf_71.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.091148] ms
+
+Keypair saved to perf_72 and perf_72.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.050349] ms
+
+Keypair saved to perf_73 and perf_73.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.118674] ms
+
+Keypair saved to perf_74 and perf_74.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.066323] ms
+
+Keypair saved to perf_75 and perf_75.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.080236] ms
+
+Keypair saved to perf_76 and perf_76.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.078416] ms
+
+Keypair saved to perf_77 and perf_77.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.146975] ms
+
+Keypair saved to perf_78 and perf_78.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.136601] ms
+
+Keypair saved to perf_79 and perf_79.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.119158] ms
+
+Keypair saved to perf_80 and perf_80.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.073498] ms
+
+Keypair saved to perf_81 and perf_81.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.056296] ms
+
+Keypair saved to perf_82 and perf_82.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.050406] ms
+
+Keypair saved to perf_83 and perf_83.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.044791] ms
+
+Keypair saved to perf_84 and perf_84.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.210362] ms
+
+Keypair saved to perf_85 and perf_85.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.049325] ms
+
+Keypair saved to perf_86 and perf_86.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.067524] ms
+
+Keypair saved to perf_87 and perf_87.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.084431] ms
+
+Keypair saved to perf_88 and perf_88.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.036155] ms
+
+Keypair saved to perf_89 and perf_89.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.070839] ms
+
+Keypair saved to perf_90 and perf_90.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.066954] ms
+
+Keypair saved to perf_91 and perf_91.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.112082] ms
+
+Keypair saved to perf_92 and perf_92.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.057126] ms
+
+Keypair saved to perf_93 and perf_93.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.206472] ms
+
+Keypair saved to perf_94 and perf_94.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.330722] ms
+
+Keypair saved to perf_95 and perf_95.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.076771] ms
+
+Keypair saved to perf_96 and perf_96.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.081847] ms
+
+Keypair saved to perf_97 and perf_97.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.119323] ms
+
+Keypair saved to perf_98 and perf_98.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.182514] ms
+
+Keypair saved to perf_99 and perf_99.pub
+
+
+[01m[1msarp 0.0.9-devel (c) 2002 Alberto Ornaghi[0m
+
+Generating prime numbers...
+
+
+
+Generating Key Pair... (1024 bit)
+
+Total time on crypto_genkeypair() is [0.061759] ms
+
+Keypair saved to perf_100 and perf_100.pub
+
